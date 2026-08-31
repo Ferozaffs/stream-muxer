@@ -1,0 +1,24 @@
+services:
+  streammux:
+    build: .
+    image: streammux:local
+    container_name: streammux
+    restart: unless-stopped
+    ports:
+      - "1935:1935"   # RTMP ingest (OBS boxes push here)
+      - "8080:8080"   # HTTP status
+    environment:
+      - STREAMMUX_ADDR=:1935
+      # RTMP URL your OBS boxes push to: rtmp://<host>:1935/streams/<srcA|srcB|srcC>
+      - STREAMMUX_SOURCES=srcA:30,srcB:20,srcC:10
+      # Where the single multiplexed stream is published (CDN/broadcast).
+      - STREAMMUX_DOWNSTREAM=rtmp://YOUR_CDN_HOST/app/YOUR_STREAM_KEY
+      - STREAMMUX_STATUS=:8080
+      - STREAMMUX_NO_DATA=10s
+      - STREAMMUX_BLACK=10s
+      - STREAMMUX_PROMOTE=2s
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
