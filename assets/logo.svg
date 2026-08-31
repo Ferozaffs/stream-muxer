@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="240" viewBox="0 0 900 240" fill="none" role="img" aria-label="stream-muxer logo">
   <defs>
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
       <feGaussianBlur stdDeviation="4" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
@@ -9,45 +9,32 @@
       </feMerge>
     </filter>
     <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#002B10"/>
-      <stop offset="1" stop-color="#020B06"/>
+      <stop stop-color="#06351A"/>
+      <stop offset="1" stop-color="#041209"/>
     </linearGradient>
   </defs>
 
-  <!-- CRT board -->
-  <rect x="10" y="16" width="880" height="208" rx="28" fill="#070B08" stroke="#00C853" stroke-width="1.5" opacity="0.96"/>
-  <!-- faint grid -->
-  <g stroke="#0F2A18" stroke-width="1" opacity="0.8">
-    <path d="M10 64 H890"/><path d="M10 112 H890"/><path d="M10 160 H890"/><path d="M10 208 H890"/>
-    <path d="M110 16 V224"/><path d="M220 16 V224"/><path d="M330 16 V224"/><path d="M440 16 V224"/>
-    <path d="M550 16 V224"/><path d="M660 16 V224"/><path d="M770 16 V224"/>
-  </g>
-
-  <!-- terminal / mux screen -->
-  <rect x="64" y="72" width="104" height="116" rx="12" fill="url(#screen)" stroke="#00FF41" stroke-width="2"/>
+  <!-- mux screen (the logo mark) -->
+  <rect x="44" y="64" width="112" height="116" rx="14" fill="url(#screen)" stroke="#0AA84C" stroke-width="2"/>
   <!-- scanlines -->
   <g stroke="#0B5A2A" stroke-width="1" opacity="0.9">
-    <path d="M70 84 H162"/><path d="M70 104 H162"/><path d="M70 124 H162"/><path d="M70 144 H162"/><path d="M70 164 H162"/><path d="M70 184 H162"/>
+    <path d="M52 80 H148"/><path d="M52 100 H148"/><path d="M52 120 H148"/><path d="M52 140 H148"/><path d="M52 160 H148"/><path d="M52 180 H148"/>
   </g>
   <!-- falling code -->
   <g fill="#1F8A4A" opacity="0.9">
-    <rect x="150" y="80"  width="5" height="6"/><rect x="150" y="102" width="5" height="6"/>
-    <rect x="150" y="128" width="5" height="6"/><rect x="150" y="156" width="5" height="6"/>
-    <rect x="150" y="172" width="5" height="6"/>
+    <rect x="136" y="74"  width="5" height="6"/><rect x="136" y="96" width="5" height="6"/>
+    <rect x="136" y="122" width="5" height="6"/><rect x="136" y="150" width="5" height="6"/>
   </g>
   <!-- three source lanes -> one output -->
-  <path d="M76 96 H124" stroke="#1F9A4C" stroke-width="5" stroke-linecap="round" opacity="0.55"/>
-  <path d="M76 124 H124" stroke="#00FF41" stroke-width="5" stroke-linecap="round" filter="url(#glow)"/>
-  <path d="M76 152 H124" stroke="#1F9A4C" stroke-width="5" stroke-linecap="round" opacity="0.4"/>
-  <path d="M128 96 V152" stroke="#00C853" stroke-width="4" stroke-linecap="round"/>
-  <!-- selected lane cursor -->
-  <rect x="120" y="118" width="14" height="12" rx="3" fill="#E8FFE8"/>
-  <path d="M132 124 H166" stroke="#00FF41" stroke-width="7" stroke-linecap="round" filter="url(#glow)"/>
-  <path d="M154 114 L166 124 L154 134" stroke="#00FF41" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M62 88 H110" stroke="#1F9A4C" stroke-width="5" stroke-linecap="round" opacity="0.6"/>
+  <path d="M62 124 H110" stroke="#B9FFC9" stroke-width="5" stroke-linecap="round" filter="url(#glow)"/>
+  <path d="M62 156 H110" stroke="#1F9A4C" stroke-width="5" stroke-linecap="round" opacity="0.45"/>
+  <path d="M114 88 V156" stroke="#0AA84C" stroke-width="4" stroke-linecap="round"/>
+  <rect x="106" y="118" width="14" height="12" rx="3" fill="#D9FFE0"/>
+  <path d="M118 124 H152" stroke="#0AA84C" stroke-width="7" stroke-linecap="round"/>
+  <path d="M140 114 L152 124 L140 134" stroke="#0AA84C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
 
   <!-- wordmark -->
-  <text x="216" y="140" font-family="'Cascadia Code','JetBrains Mono','Consolas','Menlo',monospace" font-size="70" font-weight="700" letter-spacing="-1" fill="#00FF41" filter="url(#glow)">stream-muxer</text>
-  <text x="218" y="188" font-family="'Cascadia Code','JetBrains Mono','Consolas','Menlo',monospace" font-size="24" font-weight="500" letter-spacing="5" fill="#2FA94F">MULTIPLEX · FAILOVER · ZERO RE-ENCODING</text>
-  <!-- terminal cursor -->
-  <rect x="772" y="172" width="12" height="20" fill="#00FF41" opacity="0.9"/>
+  <text x="196" y="138" font-family="'Cascadia Code','JetBrains Mono','Consolas','Menlo',monospace" font-size="66" font-weight="700" letter-spacing="-1" fill="#0AA84C" filter="url(#glow)">stream-muxer</text>
+  <text x="198" y="184" font-family="'Cascadia Code','JetBrains Mono','Consolas','Menlo',monospace" font-size="22" font-weight="500" letter-spacing="5" fill="#137A3B">ZERO RE-ENCODING</text>
 </svg>
