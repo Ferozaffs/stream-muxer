@@ -1,27 +1,38 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="240" viewBox="0 0 900 240" fill="none" role="img" aria-label="stream-muxer logo">
   <defs>
     <linearGradient id="badge" x1="20" y1="40" x2="180" y2="220" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#6366F1"/>
-      <stop offset="1" stop-color="#8B5CF6"/>
+      <stop stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#6366F1"/>
     </linearGradient>
     <linearGradient id="strokeWord" x1="0" y1="0" x2="0" y2="1" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#111827"/>
+      <stop stop-color="#0B1220"/>
       <stop offset="1" stop-color="#1F2937"/>
     </linearGradient>
   </defs>
 
+  <!-- card -->
   <rect x="20" y="40" width="170" height="170" rx="36" fill="url(#badge)"/>
 
-  <!-- three inputs merging into one output -->
-  <path d="M52 78 L116 110" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round" opacity="0.95"/>
-  <path d="M52 128 L116 128" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round" opacity="0.78"/>
-  <path d="M52 178 L116 146" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round" opacity="0.6"/>
-  <path d="M134 128 L180 128" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round"/>
-  <path d="M168 114 L186 128 L168 142" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- three source inputs (A / B / C) -->
+  <rect x="46" y="84"  width="16" height="22" rx="8" fill="#FFFFFF" opacity="0.95"/>
+  <rect x="46" y="120" width="16" height="22" rx="8" fill="#FFFFFF" opacity="0.75"/>
+  <rect x="46" y="156" width="16" height="22" rx="8" fill="#FFFFFF" opacity="0.55"/>
 
-  <!-- switch accent -->
-  <circle cx="146" cy="112" r="9" fill="#FBBF24"/>
+  <!-- feed lines into the mux chip -->
+  <path d="M62 95  L108 114" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" opacity="0.9"/>
+  <path d="M62 131 L108 131" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" opacity="0.8"/>
+  <path d="M62 167 L108 148" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- the mux chip -->
+  <rect x="108" y="100" width="56" height="62" rx="15" fill="#FFFFFF"/>
+  <!-- selector lever pointing at the currently active input -->
+  <path d="M136 131 L116 110" stroke="#1F2937" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="138" cy="133" r="5" fill="#F59E0B"/>
+
+  <!-- single output signal -->
+  <path d="M164 131 L186 131" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round"/>
+  <path d="M172 119 L186 131 L172 143" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
 
   <text x="230" y="138" font-family="ui-sans-serif, system-ui, Arial, sans-serif" font-size="72" font-weight="800" letter-spacing="-2" fill="url(#strokeWord)">stream-muxer</text>
-  <text x="233" y="186" font-family="ui-sans-serif, system-ui, Arial, sans-serif" font-size="26" font-weight="500" letter-spacing="4" fill="#6366F1">MULTIPLEX · FAILOVER · ZERO RE-ENCODING</text>
+  <text x="233" y="186" font-family="ui-sans-serif, system-ui, Arial, sans-serif" font-size="26" font-weight="500" letter-spacing="4" fill="#0891B2">LIVE STREAM SWITCHING</text>
 </svg>
